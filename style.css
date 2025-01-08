@@ -1,0 +1,622 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.cgv_wrap {
+    width: 100%;
+    height: 100%;
+}
+
+/*! ************************************ ! 상단 배너 영역 ! ******************************** !*/
+.top_ad {
+    width: 100%;
+    height: 10%;
+    background-color: #191413;
+}
+
+.ad_content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.close_ad {
+    position: absolute;
+    color: white;
+}
+
+.close_ad img {
+    position: absolute;
+    top: 10px;
+    right: -475px;
+}
+
+/*! ************************************ ! 헤더 영역 ! ******************************** !*/
+.header {
+    width: 100%;
+    position: relative;
+}
+
+.header_content {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 980px;
+    margin: 0 auto;
+    
+}
+
+/* ? cgv 홈페이지에서는 h1태그에 height 53px를 주면 자식요소에도 height가 적용되는데, 제 페이지 에서는 img에 직접 53px를 줘야만 img크기가 작아집니다. */
+.header_content .contents h1 {
+    display: inline-flex;
+    align-items: flex-end;
+    height: 53px;
+}
+
+.contents h1 a img {
+    display: block;
+    width: auto;
+    height: 53px;
+    object-fit: contain;
+}
+
+.contents h1 span {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.header_content .memberInfo_wrap {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.memberInfo_wrap li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.memberInfo_wrap li a img {
+    width: 36px;
+    height: 36px;
+}
+
+.memberInfo_wrap li {
+    margin-left: 44px;
+}
+
+.memberInfo_wrap li a {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memberInfo_wrap li a span {
+    margin-top: 3px;
+    font-size: 13px;
+}
+
+/*! ************************************ ! 네비게이션 영역 ! ******************************** !*/
+
+.nav {
+    position: relative;
+    width: 100%;
+    height: 7%;
+    border-bottom: 2px solid #fb4357;
+}
+
+.nav h1 {
+    display: none;
+}
+
+.nav .contents {
+    position: relative;
+    width: 980px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav .contents .nav_menu {
+    list-style: none;
+}
+
+.nav_menu {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+}
+
+.nav_menu li {
+    position: relative;
+    width: 100px;
+    height: 100%;
+}
+
+.nav .nav_overMenu {
+    position: relative;
+    top: 71%;
+    right:-130px;
+    width: 300px;
+    height: 450px;
+    padding: 0px 0px 0px 0px;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: visible;
+    display: inline-block;
+    transition: transform 1s ease-in-out;
+    z-index: 9;
+}
+
+.nav_overMenu.show {
+    display: block; /* 보이기 */
+    opacity: 1; /* 투명도 */
+    transform: translateY(0); /* 원래 위치 */
+}
+
+.nav_menu li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #222;
+    line-height: 1.500em;
+    padding: 0px 20px;
+}
+
+/************************* nav_overMenu css ******************************/
+
+.nav_overMenu dt {
+    display: inline-block; /* 글자 크기에 맞는 너비 */
+    width: auto; /* 글자 크기 기반 너비 */
+    padding: 0 10px; /* 선택적으로 여백 추가 */
+    /* background-color: lightblue; */
+    font-size: 16px; /* 글자 크기 */
+    margin: -10px 0px -25px 0px;
+}
+
+.nav_menu li:nth-child(1) {
+    position: relative;
+}
+.nav_menu li:nth-child(1) > h2 {
+    position: relative;
+}
+.nav_menu li:nth-child(1) .nav_overMenu {
+    position: absolute; /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(105px); /* 오른쪽으로 400px 이동 */
+    width: 600px;
+    text-align: center;
+}
+
+.nav_menu li:nth-child(2) {
+    position: relative;
+}
+.nav_menu li:nth-child(2) > h2 {
+    position: relative;
+}
+.nav_menu li:nth-child(2) .nav_overMenu {
+    position: absolute; /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(130px); /* 오른쪽으로 400px 이동 */
+}
+
+.nav_menu li:nth-child(3) {
+    position: relative;
+}
+.nav_menu li:nth-child(3) > h2 {
+    position: relative;
+}
+.nav_menu li:nth-child(3) .nav_overMenu {
+    position: absolute; /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(170px); /* 오른쪽으로 400px 이동 */
+}
+
+.nav_menu li:nth-child(4) {
+    position: relative;
+}
+.nav_menu li:nth-child(4) > h2 {
+    position: relative;
+}
+.nav_menu li:nth-child(4) .nav_overMenu {
+    position: absolute; /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(260px); /* 오른쪽으로 400px 이동 */
+}
+
+.nav_menu li:nth-child(5) {
+    position: relative;
+}
+.nav_menu li:nth-child(5) > h2 {
+    position: relative;
+}
+.nav_menu li:nth-child(5) .nav_overMenu {
+    position: absolute; /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(320px); /* 오른쪽으로 400px 이동 */
+}
+
+
+.nav_menu li:nth-child(6) {
+    position: relative;
+}
+.nav_menu li:nth-child(6) > h2 {
+    position: relative;
+}
+.nav_menu li:nth-child(6) .nav_overMenu {
+    position: absolute; /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(495px); /* 오른쪽으로 400px 이동 */
+    width: 400px;
+    overflow: hidden;
+}
+
+
+.nav_overMenu dt{
+    margin-left: -11px;
+}
+
+.nav_overMenu dd {
+    position: relative; /* 겹치지 않도록 상대 위치 설정 */
+    margin-top: 10px; /* 각 dd 사이의 간격 조정 */
+    margin-left: 0; /* 기본 왼쪽 여백 제거 */
+}
+
+.nav_overMenu dd h3{
+    margin: 5px 0px 0px 0px;
+}
+
+.nav_menu .nav_overMenu dt h2 a {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    line-height: 2.143em;
+    padding: 0px 20px;
+}
+
+.nav_menu .nav_overMenu dd h3 a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    line-height: 2.143em;
+}
+
+.nav .contents ul :nth-child(3) h2 a {
+    color: #fb4357;
+}
+
+/************************* nav_overMenu css ******************************/
+
+
+.total_search {
+    display: block;
+}
+
+/* before, after를 사용하여 검색창 좌우에 선 만드는 게 안됩니다. */
+
+.total_search label input {
+    width: 180px;
+    height: auto;
+    padding: 0 0 0 7px;
+    font-size: 16px;
+    color: #222;
+    line-height: 1.500em;
+    border-bottom: 0.5px solid #fb4357;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.total_search .btn_totalSearch {
+    position: absolute;
+    top: 15px;
+    width: 26px;
+    height: 26px;
+    font-size: 0;
+    border: none;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/common/ico/search.png) center center / 26px scroll no-repeat;
+}
+
+
+/*! ************************************ ! 비디오 영역 ! ******************************** !*/
+.video_container {
+    width: 100%;
+    height: 498px;
+    background-color: #000;
+}
+
+.video_container .contents{
+    position: relative;
+    margin: 0px auto;
+    width: 980px;
+    height: 100%;
+    z-index: 1;
+}
+
+.video_container .contents .video_wrap{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video_container .contents .video_wrap:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 75%, #000 100%);
+    z-index: 2;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.35);
+    z-index: 2;
+}
+
+.movie_title{
+    position: absolute;
+    top: 170px;
+    left: 0;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.450em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.72);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.movie_txt{
+    position: absolute;
+    top: 239px;
+    left: 0;
+    max-width: 100%;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.450em;
+    text-overflow: ellipsis;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.video_controller{
+    display: inline-flex;
+    position: absolute;
+    top: 315px;
+    left: 3px;
+    z-index: 2;
+}
+
+.video_controller a{
+    text-decoration: none;
+}
+
+.detail_view{
+    display: block;
+    padding: 6px 30px 5px 18px;
+    font-size: 14px;
+    color: #343434;
+    line-height: 1.329em;
+    background: rgba(255, 255, 255, 0.8) url(https://img.cgv.co.kr/R2014/images/common/ico/arrowR_8x13.png) calc(100% - 11px) center / 8px 13px scroll no-repeat;
+    border-radius: 15px;
+}
+
+.play_stop{
+    display: block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/main/ico/play.png) center / 18px scroll no-repeat;
+    border: 1px solid #979797;
+    border-radius: 50%;
+}
+
+.sound_on_off{
+    display: block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/main/ico/soundOff.png) center / 18px scroll no-repeat;
+    border: 1px solid #979797;
+    border-radius: 50%;
+}
+
+/*! ************************************ ! 차트 영역 ! ******************************** !*/
+
+/*? clear 속성 : https://aboooks.tistory.com/79#google_vignette ?*/
+.movie_chart_wrap{
+    clear: none;
+    float: none;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(232, 232, 232, 0.37));
+}
+
+.movie_chart_wrap .contents{
+    width: 980px;
+    height: 462px;
+    margin: 0 auto;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie_chart_wrap .contents .movie_chart_btns{
+    width: 100%;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tap_btn{
+    display: inline-flex;
+}
+
+.movie_chart_btns .tap_btn h3{
+    height: auto;
+}
+
+.movie_chart_btns .tap_btn h3 a{
+    font-weight: 400;
+    font-size: 26px;
+    color: #666;
+}
+
+#btn_reser_movie{
+    margin-left: 32px;
+}
+
+.all_view_btn a{
+    text-decoration: none;
+    padding: 7px 32px 6px 15px;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.429em;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/common/ico/arrowR_8x13.png) calc(100% - 7px) center / 8px 13px scroll no-repeat;
+    border: 1px solid #e2e2e2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* 영화들 */
+
+.movie_chart_list{
+    width: 100%;
+    height: 295px;
+    margin-top: 30px;
+}
+
+.swiper_wrap{
+    display: flex;
+    overflow:hidden
+}
+
+.swiper_slide_movie{
+    width: 170.4px;
+    height: 100%;
+    margin-right: 32px;
+}
+
+.movie_img{
+    width: 170px;
+    height: 234px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.movie_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie_age_limit {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    right: 6px;
+    top: 7px;
+    z-index: 4;
+}
+
+.movie_age_limit .age12{
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0) url(data:image/svg+xml;charset=UTF-8;base64,IDxzdmcgd2lkdGg9JzIwJyBoZWlnaHQ9JzIwJyBmaWxsPSdub25lJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxnIGNsaXAtcGF0aD0ndXJsKCNhZ2UxMiknPjxwYXRoIGQ9J00xNy43NDUgMjBIMi4yNTVBMi4yNTYgMi4yNTYgMCAwIDEgMCAxNy43NDVWMi4yNTVBMi4yNTUgMi4yNTUgMCAwIDEgMi4yNTUgMGgxNS40OUEyLjI1NSAyLjI1NSAwIDAgMSAyMCAyLjI1NXYxNS40OUEyLjI1NiAyLjI1NiAwIDAgMSAxNy43NDUgMjBaJyBmaWxsPScjRTlCNjJGJy8+PHBhdGggZD0nTTQuMzI4IDE2Ljg5MXYtOS45NEgzLjIyN0w0LjY1IDMuMTA4aDIuNzYxVjE2Ljg5SDQuMzI4Wk0xNi4zMDMgMy4xMDlIOC43NjVhLjMwOC4zMDggMCAwIDAtLjMwNy4zMDd2NC4xNjVoMy4wMTNWNS43MDZoMi4xM3YxLjY1OWwtNS4yNTggNy40ODh2Mi4wMjJoOC4yMjh2LTIuNjloLTQuMzk2bDMuODQyLTUuMzk0Yy4xMi0uMTcuMjE2LS4zMi4yOS0uNDQzLjA2OC0uMTIuMTI4LS4yNDMuMTgtLjM3LjA1LS4xMjcuMDgzLS4yNi4wOTgtLjM5Ny4wMi0uMTczLjAyOS0uMzQ4LjAyNy0uNTIyVjMuNDE2YS4zMDcuMzA3IDAgMCAwLS4zMDktLjMwN1onIGZpbGw9JyNmZmYnLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSdhZ2UxMic+PHBhdGggZmlsbD0nI2ZmZicgZD0nTTAgMGgyMHYyMEgweicvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==) center / contain scroll no-repeat;    border-radius: 2px;
+}
+
+.movie_age_limit .age15{
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0) url(data:image/svg+xml;charset=UTF-8;base64,IDxzdmcgd2lkdGg9JzIwJyBoZWlnaHQ9JzIwJyBmaWxsPSdub25lJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxnIGNsaXAtcGF0aD0ndXJsKCNhZ2UxNSknPjxwYXRoIGQ9J00xNy43NDUgMjBIMi4yNTVBMi4yNTYgMi4yNTYgMCAwIDEgMCAxNy43NDVWMi4yNTVBMi4yNTUgMi4yNTUgMCAwIDEgMi4yNTUgMGgxNS40OUEyLjI1MyAyLjI1MyAwIDAgMSAyMCAyLjI1NXYxNS40OUEyLjI1NCAyLjI1NCAwIDAgMSAxNy43NDUgMjBaJyBmaWxsPScjREQ3NDJGJy8+PHBhdGggZD0nTTQuMzE4IDE2Ljg5MXYtOS45NEgzLjIxN0w0LjY0MyAzLjExaDIuNzYxVjE2Ljg5SDQuMzE4Wk0xNi4zMTMgNy44MTVoLTQuODM0di0yLjAyaDUuMDUyVjMuMTA3SDguNDV2Ny4zNDJoNS4xNzd2My44NWgtMi4xODN2LTEuODEySDguNDV2NC4wOTVhLjMwNi4zMDYgMCAwIDAgLjMwNy4zMDhoNy41NTZhLjMwNi4zMDYgMCAwIDAgLjMwOC0uMzA4VjguMTI1YS4zMDcuMzA3IDAgMCAwLS4zMDgtLjMxWicgZmlsbD0nI2ZmZicvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9J2FnZTE1Jz48cGF0aCBmaWxsPScjZmZmJyBkPSdNMCAwaDIwdjIwSDB6Jy8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+) center / contain scroll no-repeat;    border-radius: 2px;
+}
+
+.movie_age_limit .age19{
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0) url(data:image/svg+xml;charset=UTF-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1MCcgaGVpZ2h0PSc1MCcgZmlsbD0nbm9uZSc+PGcgY2xpcC1wYXRoPSd1cmwoI2FnZTE5KSc+PHBhdGggZmlsbD0nI0Q5MkIzNScgZD0nTTQ0LjM2MyA1MEg1LjYzN2E1LjYwMyA1LjYwMyAwIDAgMS0zLjk4MS0xLjY0NkE1LjY1MSA1LjY1MSAwIDAgMSAwIDQ0LjM2MlY1LjYzOGE1LjY3MSA1LjY3MSAwIDAgMSAxLjY1Ni0zLjk5MkE1LjYyMyA1LjYyMyAwIDAgMSA1LjYzNyAwaDM4LjcyNmE1LjYwMyA1LjYwMyAwIDAgMSAzLjk4MSAxLjY0NkE1LjY1IDUuNjUgMCAwIDEgNTAgNS42Mzh2MzguNzI0YTUuNjcgNS42NyAwIDAgMS0xLjY1NiAzLjk5MkE1LjYyMyA1LjYyMyAwIDAgMSA0NC4zNjMgNTB6Jy8+PHBhdGggZmlsbD0nI2ZmZicgZD0nTTEwLjU5MyA0Mi4yMjVWMTcuMzc3SDcuODRsMy41NjUtOS42MDdoNi45djM0LjQ1NmgtNy43MTJ6TTQwLjkyMSA3Ljc3SDIxLjc1OWEuNzY2Ljc2NiAwIDAgMC0uNzE0LjQ3Ni43NzcuNzc3IDAgMCAwLS4wNTkuMjk3djE3LjM1YTEuNTQ1IDEuNTQ1IDAgMCAwIC45NSAxLjQyNGMuMTg2LjA3Ny4zODYuMTE2LjU4OC4xMTZoMTEuNjh2OC4yODJoLTUuNDU3di00LjQ5M2gtNy40OXYxMC4yMzVhLjc3NC43NzQgMCAwIDAgLjc3Ljc2OEg0MC45MmEuNzY3Ljc2NyAwIDAgMCAuNzY5LS43NjhWOC41NDNhLjc3NC43NzQgMCAwIDAtLjc2OS0uNzczem0tMTIuMzEgNy4xMDdhLjc3My43NzMgMCAwIDEgLjc3My0uNzY5aDMuOTZhLjc2Ny43NjcgMCAwIDEgLjc2OS43Njl2Ni4wMzRhLjc3NC43NzQgMCAwIDEtLjc3Ljc3MmgtMy45NTlhLjc2Ni43NjYgMCAwIDEtLjcxNC0uNDc2Ljc3NS43NzUgMCAwIDUyLS4wNTktLjI5NnYtNi4wMzR6Jy8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0nYWdlMTknPjxwYXRoIGZpbGw9JyNmZmYnIGQ9J00wIDBoNTB2NTBIMHonLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=) center / contain scroll no-repeat;    border-radius: 2px;
+}
+
+.screen_type{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 5;
+}
+
+/*? position:relative 사용 이유를 모르겠음 ?*/
+.screen_type .screenType{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 34px;
+    height: 10px;
+    border: 1px solid rgba(223, 223, 223, 0.5);
+    border-radius: 3px;
+}
+
+.screen_type img{
+    width: 35px;
+    height: 7px;
+}
+
+.cgvIcon{
+    display: inline-flex;
+    font-size: 0;
+}
+
+.movie_info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie_info .movie_name{
+    display: block;
+    margin-top: 14px;
+    font-size: 18px;
+    text-align: center;
+    flex-basis: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.movie_info span{
+    display: block;
+    float: left;
+    font-size: 14px;
+    color: #444;
+    margin-top: 9px;
+    line-height: 1.214em;
+
+}
+
+.movie_info span ~ span{
+    position: relative;
+    padding-left: 16px;
+}
+
+.movie_info span img{
+    width: 15px;
+    vertical-align: top;
+}
