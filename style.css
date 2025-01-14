@@ -11,10 +11,10 @@ body {
     height: 100%;
 }
 
-/*! ************************************ ! 상단 배너 영역 ! ******************************** !*/
+/*******************************! 상단 배너 영역 !*********************************/
 .top_ad {
     width: 100%;
-    height: 10%;
+    height: 80px;
     background-color: #191413;
 }
 
@@ -35,7 +35,7 @@ body {
     right: -475px;
 }
 
-/*! ************************************ ! 헤더 영역 ! ******************************** !*/
+/*************************************! 헤더 영역 !********************************/
 .header {
     width: 100%;
     position: relative;
@@ -106,12 +106,12 @@ body {
     font-size: 13px;
 }
 
-/*! ************************************ ! 네비게이션 영역 ! ******************************** !*/
+/*********************************! 네비게이션 영역 !*********************************/
 
 .nav {
     position: relative;
     width: 100%;
-    height: 7%;
+    height: 50px;
     border-bottom: 2px solid #fb4357;
 }
 
@@ -146,8 +146,8 @@ body {
 
 .nav .nav_overMenu {
     position: relative;
-    top: 71%;
-    right:-130px;
+    top: 66%;
+    right: -130px;
     width: 300px;
     height: 450px;
     padding: 0px 0px 0px 0px;
@@ -323,7 +323,7 @@ body {
 }
 
 
-/*! ************************************ ! 비디오 영역 ! ******************************** !*/
+/*************************************! 비디오 영역 !********************************/
 .video_container {
     width: 100%;
     height: 498px;
@@ -433,7 +433,7 @@ video{
     border-radius: 50%;
 }
 
-/*! ************************************ ! 차트 영역 ! ******************************** !*/
+/*************************************! 차트 영역 !*********************************/
 
 /*? clear 속성 : https://aboooks.tistory.com/79#google_vignette ?*/
 .movie_chart_wrap{
@@ -446,7 +446,7 @@ video{
 
 .movie_chart_wrap .contents{
     width: 980px;
-    height: 462px;
+    /* height: 462px; */
     margin: 0 auto;
     padding: 50px 0px;
     display: flex;
@@ -497,7 +497,9 @@ video{
 .movie_chart_list{
     width: 100%;
     height: 295px;
-    margin-top: 30px;
+    padding: 20px 0px 20px 0px;
+    /* overflow: visible;
+    position: relative; */
 }
 
 .swiper_wrap{
@@ -619,4 +621,488 @@ video{
 .movie_info span img{
     width: 15px;
     vertical-align: top;
+}
+
+/* 좌우 이동 버튼 */
+
+.swiper_btn_prev{
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    left: 225px;
+    top: calc(50% - 30px);
+    width: 40px;
+    height: 40px;
+    /* margin-top: -20px; */
+    font-size: 0;
+    z-index: 9;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.swiper_btn_next{
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    right: 225px;
+    top: calc(50% - 30px);
+    width: 40px;
+    height: 40px;
+    /* margin-top: -20px; */
+    font-size: 0;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.swiper_btn_prev:after{
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8) url(https://img.cgv.co.kr/R2014/images/common/ico/arrowL.png) center / 9px 13px scroll no-repeat;
+}
+
+.swiper_btn_next:after{
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8) url(https://img.cgv.co.kr/R2014/images/common/ico/arrowR_5x9.png) center / 9px 13px scroll no-repeat;
+}
+
+/*********************************! 이벤트 영역 !*********************************/
+
+.event_wrap{
+    overflow: hidden;
+    position: relative;
+    padding: 60px 0 6px;
+}
+
+.event_wrap .contents{
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.event_title{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /*? 왜 space-between이 안먹히지 ?*/
+}
+.event_wrap .contents h3{
+    font-weight: 700;
+    font-size: 26px;
+    color: #222;
+}
+
+.event_title .event_btn{
+    display: flex;
+    flex-direction: row;
+    margin-left: 760px;
+}
+
+.event_wrap .contents .event_controller_btn{
+    display: block;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/common/ico/main/play.png) 10px center / 11px 15px scroll no-repeat;
+    border: 1px solid #e3e3e3;
+    border-radius: 50%;
+    margin: 2px 10px 0px 0px;
+}
+
+
+.event_wrap .contents .all_view_btn{
+    text-decoration: none;
+    padding: 4px 32px 2px 15px;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.729em;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/common/ico/arrowR_8x13.png) calc(100% - 7px) center / 8px 13px scroll no-repeat;
+    border: 1px solid #e2e2e2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.event_wrap .contents .event_list .swiper_wrap{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+.event_wrap .contents .event_list .swiper_wrap .swiper_slide{
+    display: flex;
+    
+}
+
+.event_wrap .contents .event_list .swiper_wrap .swiper_slide .img_wrap{
+    overflow: hidden;
+    width: 310px;
+    height: 207px;
+    border-radius: 10px;
+}
+
+.img_wrap img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.event_wrap .swiper_slide a{
+    text-decoration: none;
+}
+
+.event_wrap .swiper_slide a strong{
+    display: block;
+    overflow: hidden;
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #222;
+    line-height: 1.444em;
+    white-space: nowrap;
+}
+
+.event_wrap .swiper_slide a span{
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.429em;
+}
+
+/*********************************! 스페셜 홀 영역 !*********************************/
+
+.special_hall_wrap {
+    padding: 60px 0 21px;
+}
+
+.special_hall_wrap .contents{
+    display: flex;
+    flex-direction: column;
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.special_hall_wrap a{
+    text-decoration: none;
+}
+
+.special_hall_wrap .contents .special_hall_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.special_hall_title h3{
+    font-weight: 700;
+    font-size: 26px;
+    color: #222;
+}
+
+.special_hall_wrap .contents .special_hall_title .all_view_btn{
+    text-decoration: none;
+    padding: 4px 32px 2px 15px;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.729em;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/common/ico/arrowR_8x13.png) calc(100% - 7px) center / 8px 13px scroll no-repeat;
+    border: 1px solid #e2e2e2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.special_hall_contents{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.special_hall_link{
+    display: block;
+    overflow: hidden;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.special_hall_link .img_wrap{
+    width: 100%;
+    height: 100%;
+}
+
+.special_hall_link .img_wrap img{
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contents_list{
+    list-style: none;
+    width: 440px;
+}
+
+.contents_list li{
+    border: 1px solid transparent;
+    border-top: 1px solid #e9e9e9;
+}
+
+.contents_list li:hover{
+    border: 1.5px solid #222;
+    border-radius: 10px;
+}
+
+.contents_list a{
+    color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 25px 19px 19px;
+}
+
+.contents_list li a strong{
+    font-weight: 400;
+    font-size: 18px;
+    color: #222;
+    line-height: 1.444em;
+}
+
+.contents_list li a span{
+    padding: 2px 7px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.429em;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+}
+
+/*********************************! 기프트콘 영역 !*********************************/
+
+.giftcon_wrap{
+    padding: 60px 0 0;
+}
+
+.giftcon_wrap .contents{
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.giftcon_list_wrap{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.giftcon_list_wrap li{
+    width: 270px;
+    padding: 20px 19px 30px;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+}
+
+.giftcon_list_wrap > li ~ li {
+    margin-left: 25px;
+}
+
+.giftcon_list dt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 20px;
+    color: #222;
+    line-height: 1.450em;
+}
+
+.more_btn{
+    padding: 2px 15px 0px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.417em;
+    border: 1px solid #e2e2e2;
+    border-radius: 11px;
+}
+
+.giftcon_list dt + dd{
+    margin-top: 27px;
+    text-decoration: none;
+}
+
+.giftcon_list dt a{
+    text-decoration: none;
+}
+
+.giftcon_list dd{
+    margin-left: 0;
+}
+
+.giftcon_list dd a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #222;
+}
+
+.giftcon_list .img_wrap{
+    position: relative;
+    width: 75px;
+    height: 76px;
+    border-radius: 5px;
+}
+
+.giftcon_list .img_wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.giftcon_info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.giftcon_info span + strong{
+    
+}
+
+/*********************************! 공지사항 영역 !*********************************/
+
+.notice_client_wrap{
+    padding: 60px 0 0;
+}
+
+.notice_client_wrap .contents{
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.notice_client_container{
+    display: flex;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    width: 736px;
+    height: 236px;
+}
+
+.notice_client_content{
+    width: 460px;
+    padding: 24px 26px 20px 30px;
+}
+
+.notice_wrap{
+    display: block;
+    padding-bottom: 41px;
+    border-bottom: 1.5px solid #f4f4f4;
+}
+
+.notice_wrap strong{
+    float: left;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222;
+    line-height: 1.500em;
+}
+
+.notice_wrap .btn_link{
+    float: left;
+    overflow: hidden;
+    max-width: 300px;
+    margin-top: 2px;
+    margin-left: 28px;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.429em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notice_wrap .more_btn{
+    float: right;
+    text-decoration: none;
+}
+
+.notice_client_container .qr_wrap{
+    display: flex;
+    flex-direction: column;
+    width: 222px;
+    text-align: center;
+    border-left: 1px solid #e4e4e4;
+}
+
+.client_list{
+    display: flex;
+    padding: 19px 0 0px;
+}
+
+.client_list dt{
+    font-weight: 500;
+    font-size: 16px;
+    color: #222;
+}
+
+.client_list dd{
+    display: flex;
+    flex-direction: column;
+}
+
+.client_list dd span{
+    margin: 7px 0px 0px 0px;
+}
+
+.client_list dd span p {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-top: 7px;
+}
+
+.client_btn_wrap a{
+    padding: 7px 14px;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.429em;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.qr_wrap strong{
+    display: block;
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #222;
+}
+
+.qr_wrap .img_wrap{
+    width: 60px;
+    height: 60px;
+    margin: 29px auto 0;
+}
+
+.qr_wrap span{
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #222;
+    line-height: 1.250em;
+}
+
+.qr_wrap p{
+    margin-top: 24px;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: -0.030em;
+    line-height: 1.417em;
 }
