@@ -11,7 +11,8 @@
 <body>
     <div class="cgv_wrap">
 
-        <div class="top_ad">
+        <!-- 상단 광고 -->
+        <div class="top_ad" id="top_ad">
             <div class="ad_content">
                 <a href="#">
                     <img src="https://adimg.cgv.co.kr/images/202412/HARBIN/1224_980x80.png" alt="하얼빈" border="0">
@@ -22,6 +23,7 @@
             </div>
         </div>
 
+        <!-- 헤더 -->
         <header class="header">
             <div class="header_content">
                 <div class="contents">
@@ -79,6 +81,7 @@
             </div>
         </header>
 
+        <!-- 네비게이션 바 -->
         <nav class="nav">
             <div class="contents">
                 <!-- 스크롤 시 변경되는 네비게이션 바의 로고 -->
@@ -330,6 +333,7 @@
             </div>
         </nav>
 
+        <!-- 비디오 영역 -->
         <section class="video_container">
             <div class="contents">
                 <div class="video_wrap">
@@ -352,15 +356,16 @@
             </div>
         </section>
 
+        <!-- 영화 차트 영역 -->
         <section class="movie_chart_wrap">
             <div class="contents">
                 <div class="movie_chart_btns">
                     <div class="tap_btn">
-                        <h3 id="btn_movie">
-                            <a>무비차트</a>
+                        <h3 id="btn_movie"  onclick="switch1()">
+                            <a href="#none" style="color: #000; font-weight: 700;">무비차트</a>
                         </h3>
-                        <h3 id="btn_reser_movie">
-                            <a>상영예정작</a>
+                        <h3 id="btn_reser_movie" onclick="switch2()">
+                            <a href="#none">상영예정작</a>
                         </h3>
                     </div>
                     <div class="all_view_btn">
@@ -368,7 +373,7 @@
                     </div>
                 </div>
                 <div class="movie_chart_list" id="movie_chart_list" style="display: block;">
-                    <div class="swiper_btn_prev" tabindex="0" role="button" aria-disabled="false"></div>
+                    <div class="swiper_btn_prev" tabindex="0" role="button" aria-disabled="false" onclick="prev()"></div>
                     <div class="swiper_wrap">
                         <div class="swiper_slide_movie">
                             <div class="movie_img">
@@ -571,15 +576,15 @@
 
 
                     </div>
-                    <div class="swiper_btn_next" tabindex="0" role="button" aria-disabled="false"></div>
+                    <div class="swiper_btn_next" tabindex="0" role="button" aria-disabled="false" onclick="next()"></div>
                 </div>
                 <!-- 더 직관적으로 id값을 잡아야함 -->
-                <div class="movie_chart_list" id="movie_chart_list" style="display: none;">
+                <div class="movie_chart_list" id="movie_chart_list_reser" style="display: none;">
                     <div class="swiper_btn_prev" tabindex="0" role="button" aria-disabled="false"></div>
                     <div class="swiper_wrap">
                         <div class="swiper_slide_movie">
                             <div class="movie_img">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88797/88797_320.jpg"
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89378/89378_320.jpg"
                                     alt="하얼빈">
                                 <div class="movie_age_limit">
                                     <i class="cgvIcon etc age15">15</i>
@@ -591,7 +596,7 @@
                                 </div>
                             </div>
                             <div class="movie_info">
-                                <strong class="movie_name">하얼빈</strong>
+                                <strong class="movie_name">꼬마 판다 팡의 아프리카 대모험</strong>
                                 <span> <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggreat.png"
                                         alt="Golden Egg great"> 89%</span>
                                 <span>예매율 25.5%</span>
@@ -599,7 +604,7 @@
                         </div>
                         <div class="swiper_slide_movie">
                             <div class="movie_img">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89330/89330_320.jpg"
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86142/86142_320.jpg"
                                     alt="보고타: 마지막 기회의 땅" onerror="errorImage(this)">
                                 <div class="movie_age_limit">
                                     <i class="cgvIcon etc age15">15</i>
@@ -609,7 +614,7 @@
                                 </div>
                             </div>
                             <div class="movie_info">
-                                <strong class="movie_name">보고타: 마지막 기회의 땅</strong>
+                                <strong class="movie_name">(스페셜 에디션)[씨네뮤지엄] 빈센트 반 고흐</strong>
                                 <span> <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggreat.png"
                                         alt="Golden Egg great"> 79%</span>
                                 <span>예매율 11.9%</span>
@@ -617,7 +622,7 @@
                         </div>
                         <div class="swiper_slide_movie">
                             <div class="movie_img">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89336/89336_320.jpg"
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89367/89367_320.jpg"
                                     alt="동화지만 청불입니다" onerror="errorImage(this)">
                                 <div class="movie_age_limit">
                                     <i class="cgvIcon etc age19">19</i>
@@ -629,7 +634,7 @@
                                 </div>
                             </div>
                             <div class="movie_info">
-                                <strong class="movie_name">동화지만 청불입니다</strong>
+                                <strong class="movie_name">히트맨 2</strong>
                                 <span> <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggreat.png"
                                         alt="Golden Egg great"> 99%</span>
                                 <span>예매율 25.5%</span>
@@ -637,7 +642,7 @@
                         </div>
                         <div class="swiper_slide_movie">
                             <div class="movie_img">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89361/89361_320.jpg"
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89384/89384_320.jpg"
                                     alt="페라리" onerror="errorImage(this)">
                                 <div class="movie_age_limit">
                                     <i class="cgvIcon etc age15">15</i>
@@ -649,7 +654,7 @@
                                 </div>
                             </div>
                             <div class="movie_info">
-                                <strong class="movie_name">페라리</strong>
+                                <strong class="movie_name">언데드 다루는 법</strong>
                                 <span> <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggreat.png"
                                         alt="Golden Egg great"> 99%</span>
                                 <span>예매율 10.6%</span>
@@ -657,7 +662,7 @@
                         </div>
                         <div class="swiper_slide_movie">
                             <div class="movie_img">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89286/89286_320.jpg"
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000089/89332/89332_320.jpg"
                                     alt="더 폴: 디렉터스 컷" onerror="errorImage(this)">
                                 <div class="movie_age_limit">
                                     <i class="cgvIcon etc age12">12</i>
@@ -669,7 +674,7 @@
                                 </div>
                             </div>
                             <div class="movie_info">
-                                <strong class="movie_name">더 폴: 디렉터스 컷</strong>
+                                <strong class="movie_name">극장판 포켓몬스터 AG: 뮤와 파동의 용사 루카리오</strong>
                                 <span> <img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldenegggreat.png"
                                         alt="Golden Egg great"> 96%</span>
                                 <span>예매율 3.7%</span>
@@ -776,13 +781,13 @@
                             </div>
                         </div>
 
-
                     </div>
-                    <div class="swiper_btn_next" tabindex="0" role="button" aria-disabled="false"></div>
+                    <div class="swiper_btn_next" tabindex="0" role="button" aria-disabled="false" ></div>
                 </div>
             </div>
         </section>
 
+        <!-- 이벤트 영역 -->
         <section class="event_wrap">
             <div class="contents">
                 <div class="event_title">
@@ -820,6 +825,7 @@
             </div>
         </section>
 
+        <!-- 특별관 영역 -->
         <section class="special_hall_wrap">
             <div class="contents">
                 <div class="special_hall_title">
@@ -870,6 +876,7 @@
             </div>
         </section>
 
+        <!-- 기프티콘 영역 -->
         <section class="giftcon_wrap">
             <div class="contents">
                 <ul class="giftcon_list_wrap">
@@ -1000,6 +1007,7 @@
             </div>
         </section>
 
+        <!-- 공지사항 영역 -->
         <section class="notice_client_wrap">
             <div class="contents">
                 <div class="notice_client_container">
@@ -1047,6 +1055,15 @@
             </div>
         </section>
 
+        <!-- 예매하기 버튼 (fixed) -->
+        <div class="scroll_top">
+            <a href="#none" class="ticketing">예매하기</a>
+            <a href="#top_ad" class="btn_gototop">
+                <img src="https://img.cgv.co.kr/R2014/images/common/btn/gotoTop.png" alt="최상단으로 이동">
+            </a>
+        </div>
+
+        <!-- 하단 광고 및 페이지 관련 정보 영역 -->
         <footer>
             <div class="bottom_ad">
                 <!-- 
@@ -1121,7 +1138,7 @@
                     </dl>
                     <p class="copyright">© CJ CGV. All Rights Reserved</p>
                 </section>
-                
+
                 <section class="familysite_wrap">
                     <!-- select만 있으면 되는거 아닌가 label은 어차피 font-size : 0 처리할건데..?? -->
                     <label for="familysite">CJ그룹 계열사 바로가기</label>

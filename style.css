@@ -4,6 +4,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .cgv_wrap {
@@ -46,7 +47,7 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.contents {
+.header .contents {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -120,25 +121,25 @@ body {
     height: 60px;
     top: 0;
     z-index: 9999;
-    background: rgb(173,54,69);
-    background: linear-gradient(90deg, rgba(173,54,69,1) 0%, rgba(222,71,80,1) 14%, rgba(231,74,69,1) 28%, rgba(238,78,61,1) 42%, rgba(241,85,55,1) 55%, rgba(239,99,47,1) 65%);
+    background: rgb(173, 54, 69);
+    background: linear-gradient(90deg, rgba(173, 54, 69, 1) 0%, rgba(222, 71, 80, 1) 14%, rgba(231, 74, 69, 1) 28%, rgba(238, 78, 61, 1) 42%, rgba(241, 85, 55, 1) 55%, rgba(239, 99, 47, 1) 65%);
     border: none;
 }
 
-.nav.sticky a{
-    color:white;
+.nav.sticky a {
+    color: white;
 }
 
 .nav h1 {
     display: none;
 }
 
-.nav.sticky h1{
+.nav.sticky h1 {
     display: block;
     margin-bottom: 25px;
 }
 
-.nav.sticky h1 a img{
+.nav.sticky h1 a img {
     width: 70px;
     height: 32px;
 }
@@ -149,6 +150,9 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    margin: 0 225px;
+    justify-content: space-between;
+
 }
 
 .nav .contents .nav_menu {
@@ -174,23 +178,14 @@ body {
     right: -130px;
     width: 300px;
     height: 450px;
+    max-height: 450px;
     padding: 0px 0px 0px 0px;
     background-color: #fff;
     box-sizing: border-box;
-    overflow: visible;
-    display: inline-block;
-    transition: transform 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: 9;
 }
 
-.nav_overMenu.show {
-    display: block;
-    /* 보이기 */
-    opacity: 1;
-    /* 투명도 */
-    transform: translateY(0);
-    /* 원래 위치 */
-}
 
 .nav_menu li a {
     text-decoration: none;
@@ -289,7 +284,7 @@ body {
 .nav_menu li:nth-child(5) .nav_overMenu {
     position: absolute;
     /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
-    transform: translateX(320px);
+    transform: translateX(350px);
     /* 오른쪽으로 400px 이동 */
 }
 
@@ -305,12 +300,111 @@ body {
 .nav_menu li:nth-child(6) .nav_overMenu {
     position: absolute;
     /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
-    transform: translateX(495px);
+    transform: translateX(515px);
     /* 오른쪽으로 400px 이동 */
     width: 400px;
     overflow: hidden;
 }
 
+/*? 스크롤 내렸을 때 ?*/
+/* 숨겨진 드롭다운 메뉴 전체에 적용이 아닌 개별적으로 다시 설정해야되서 코드가 길어짐 (수정 필요)
+    위에 코드부터 수정 필요..
+*/
+
+.nav.sticky .nav_menu li:nth-child(1) {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(1)>h2 {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(1) .nav_overMenu {
+    position: absolute;
+    /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(-50px);
+    /* 오른쪽으로 400px 이동 */
+    width: 600px;
+    text-align: center;
+}
+
+.nav.sticky .nav_menu li:nth-child(2) {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(2)>h2 {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(2) .nav_overMenu {
+    position: absolute;
+    /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(0px);
+    /* 오른쪽으로 400px 이동 */
+}
+
+.nav.sticky .nav_menu li:nth-child(3) {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(3)>h2 {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(3) .nav_overMenu {
+    position: absolute;
+    /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(70px);
+    /* 오른쪽으로 400px 이동 */
+}
+
+.nav.sticky .nav_menu li:nth-child(4) {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(4)>h2 {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(4) .nav_overMenu {
+    position: absolute;
+    /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(170px);
+    /* 오른쪽으로 400px 이동 */
+}
+
+.nav.sticky .nav_menu li:nth-child(5) {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(5)>h2 {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(5) .nav_overMenu {
+    position: absolute;
+    /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(270px);
+    /* 오른쪽으로 400px 이동 */
+}
+
+
+.nav.sticky .nav_menu li:nth-child(6) {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(6)>h2 {
+    position: relative;
+}
+
+.nav.sticky .nav_menu li:nth-child(6) .nav_overMenu {
+    position: absolute;
+    /* 드롭다운 메뉴의 위치를 절대적으로 설정 */
+    transform: translateX(450px);
+    /* 오른쪽으로 400px 이동 */
+    width: 400px;
+    overflow: hidden;
+}
 
 .nav_overMenu dt {
     margin-left: -11px;
@@ -374,11 +468,11 @@ body {
     border-right: none;
 }
 
-.nav.sticky .total_search label input{
+.nav.sticky .total_search label input {
     background: none;
     border-bottom: none;
     padding: 1.5px 0px 0px 0px;
-    color:#fff
+    color: #fff
 }
 
 .total_search .btn_totalSearch {
@@ -408,7 +502,7 @@ body {
     margin: 0px auto;
     width: 980px;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .video_container .contents .video_wrap {
@@ -512,9 +606,10 @@ video {
 .movie_chart_wrap {
     clear: none;
     float: none;
-    overflow: hidden;
+    position: relative;
     position: relative;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(232, 232, 232, 0.37));
+    z-index: -2;
 }
 
 .movie_chart_wrap .contents {
@@ -524,6 +619,8 @@ video {
     padding: 50px 0px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+
 }
 
 .movie_chart_wrap .contents .movie_chart_btns {
@@ -537,6 +634,10 @@ video {
 
 .tap_btn {
     display: inline-flex;
+}
+
+.tap_btn a {
+    text-decoration: none;
 }
 
 .movie_chart_btns .tap_btn h3 {
@@ -577,7 +678,9 @@ video {
 
 .swiper_wrap {
     display: flex;
-    overflow: hidden
+    overflow: hidden;
+    width: max-content;
+    transition: transform 0.3s ease;
 }
 
 .swiper_slide_movie {
@@ -742,6 +845,14 @@ video {
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.8) url(https://img.cgv.co.kr/R2014/images/common/ico/arrowR_5x9.png) center / 9px 13px scroll no-repeat;
+}
+
+.swiper_btn_prev:hover {
+    cursor: pointer;
+}
+
+.swiper_btn_next:hover {
+    cursor: pointer;
 }
 
 /*********************************! 이벤트 영역 !*********************************/
@@ -1184,7 +1295,7 @@ video {
 
 /*! 하단 광고 영역 !*/
 
-.policy_list{
+.policy_list {
     display: flex;
     justify-content: space-between;
     max-width: 980px;
@@ -1194,14 +1305,14 @@ video {
     list-style: none;
 }
 
-.policy_list li a{
+.policy_list li a {
     font-weight: 500;
     font-size: 13px;
     color: #666;
     text-decoration: none;
 }
 
-.company_info_wrap{
+.company_info_wrap {
     position: relative;
     display: flex;
     margin: 20px auto;
@@ -1210,39 +1321,39 @@ video {
     color: #666;
 }
 
-.company_info_list{
+.company_info_list {
     display: flex;
 }
 
-.company_info_list dd{
+.company_info_list dd {
     margin: 0 1px;
 }
 
-.company_info_list dt::after{
+.company_info_list dt::after {
     content: ':';
     padding: 0 2px;
 }
 
-.company_info .company_info_list dt ~ dt:before {
+.company_info .company_info_list dt~dt:before {
     content: '·';
     padding: 0 8px 0 4px;
 }
 
-.company_info_list dd a{
-    color:#666
+.company_info_list dd a {
+    color: #666
 }
 
-.familysite_wrap{
+.familysite_wrap {
     position: absolute;
     top: 60px;
     right: 0;
 }
 
-.familysite_wrap label{
+.familysite_wrap label {
     font-size: 0;
 }
 
-.familysite_wrap select{
+.familysite_wrap select {
     height: 34px;
     font-size: 12px;
     color: #666;
@@ -1250,7 +1361,7 @@ video {
     border: 1px solid #d8d8d8;
 }
 
-.familysite_wrap .btn_familysite{
+.familysite_wrap .btn_familysite {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -1262,3 +1373,59 @@ video {
     color: #fff;
     text-decoration: none;
 }
+
+/*! 예매, 위로가기 영역 !*/
+
+.scroll_top {
+    position: fixed;
+    display: flex;
+    bottom: 100px;
+    right: 40px;
+    text-align: center;
+    margin-right: 100px;
+    z-index: 5;
+    visibility: hidden; /* 기본적으로 숨김 */
+    transition: visibility 0s 0.4s; /* 애니메이션 후 visibility 변경 */
+}
+
+.scroll_top.show {
+    visibility: visible;
+    transition: visibility 0s 0s; /* visibility가 바로 보이도록 설정 */
+}
+
+.scroll_top .ticketing {
+    position: absolute;
+    width: 136px;
+    padding: 12px 0px 14px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(173, 54, 69, 1) 0%, rgba(222, 71, 80, 1) 14%, rgba(231, 74, 69, 1) 28%, rgba(238, 78, 61, 1) 42%, rgba(241, 85, 55, 1) 55%, rgba(239, 99, 47, 1) 65%);
+    border-radius: 30px;
+    line-height: 1.525em;
+    right: 0; /* 기본 위치 */
+    transition: right 0.4s ease-in-out; /* 오른쪽 위치 변경 애니메이션 */
+}
+
+.scroll_top .btn_gototop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #000;
+    background-color: #fff;
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s ease-in-out;
+    right: -87px; /* 기본 위치 */
+}
+
+.scroll_top .btn_gototop img {
+    width: 15px;
+    height: 21px;
+    margin: 0 auto;
+}
+
